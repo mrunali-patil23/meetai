@@ -23,7 +23,7 @@ interface DataTableProps<TData, TValue> {
 export function DataTable<TData, TValue>({
   columns,
   data,
-  onRowClick
+  onRowClick,
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="overflow-hidden rounded-lg border bg-background">
+    <div className="rounded-lg border bg-background overflow-hidden">
       <Table>
         <TableBody>
           {table.getRowModel().rows?.length ? (
