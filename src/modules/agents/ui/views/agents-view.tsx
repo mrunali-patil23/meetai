@@ -4,12 +4,12 @@ import { useRouter } from "next/navigation";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { useTRPC } from "@/trpc/client";
+import { DataTable } from "@/components/data-table";
 import { ErrorState } from "@/components/error-state";
 import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 
 import { columns } from "../components/columns";
-import { DataTable } from "../components/data-table";
 import { DataPagination } from "../components/data-pagination";
 import { useAgentsFilters } from "../../hooks/use-agents-filters";
 
@@ -24,7 +24,7 @@ export const AgentsView = () => {
 
     return (
         <div className="flex-1 p-4 px-4 md:px-8 flex flex-col gap-y-4">
-            <DataTable 
+            <DataTable
                 data={data.items} 
                 columns={columns} 
                 onRowClick={(row) => router.push(`/agents/${row.id}`)}
