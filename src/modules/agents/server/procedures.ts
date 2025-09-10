@@ -32,7 +32,7 @@ export const agentsRouter = createTRPCRouter({
             }
 
             return updatedAgent;
-        }),
+        }),                                                                                                                                                                                                                                                                                                         
     remove: protectedProcedure
         .input(z.object({ id: z.string() }))
         .mutation(async ({ ctx, input }) => {
