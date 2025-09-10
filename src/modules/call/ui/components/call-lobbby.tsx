@@ -13,7 +13,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import { generateAvatarUri } from "@/lib/avatar";
 
-import "@stream-io/video-react-sdk/dist/css/styles.css"
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 
 interface Props {
     onJoin: () => void;
@@ -61,7 +61,7 @@ export const CallLobby = ({ onJoin }: Props) => {
                 <div className="flex flex-col items-center justify-center gap-y-6 bg-background rounded-lg p-10 shadow-sm">
                     <div className="flex flex-col gap-y-2 text-center">
                         <h6 className="text-lg font-medium">Ready to join?</h6>
-                        <p className="text-sm">Set up your call before calling</p>
+                        <p className="text-sm">Set up your call before joining</p>
                     </div>
                     <VideoPreview 
                     DisabledVideoPreview={
@@ -70,7 +70,7 @@ export const CallLobby = ({ onJoin }: Props) => {
                             : AllowBrowerPermissions
                         }
                     />
-                    <div className=" flex gap-x-2">
+                    <div className="flex gap-x-2">
                         <ToggleAudioPreviewButton />
                         <ToggleVideoPreviewButton />
                     </div>
