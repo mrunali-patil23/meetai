@@ -1,6 +1,6 @@
 import { eq, inArray } from "drizzle-orm";
 import JSONL from "jsonl-parse-stringify";
-import { createAgent, gemini, openai, TextMessage } from "@inngest/agent-kit";
+import { createAgent, gemini, TextMessage } from "@inngest/agent-kit";
 
 import { db } from "@/db";
 import { agents, meetings, user } from "@/db/schema";
